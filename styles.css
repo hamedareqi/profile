@@ -1,4 +1,4 @@
-/* المتغيرات */
+
 :root {
   --bg: #0e1a2b;
   --bg-secondary: #152237;
@@ -9,7 +9,6 @@
   --shadow-glow-hover: 0 0 25px rgba(0, 255, 213, 0.6);
 }
 
-/* إعادة الضبط */
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +23,7 @@ body {
   overflow-x: hidden;
 }
 
-/* الهيدر */
+
 #hero {
   text-align: center;
   padding: 4rem 1rem 2rem;
@@ -52,8 +51,21 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+  }
+}
 
-/* القائمة */
+.card.glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -97,7 +109,6 @@ body {
   left: 0;
 }
 
-/* الشبكة */
 .grid-cards {
   display: grid;
   gap: 1.5rem;
@@ -143,7 +154,6 @@ body {
   }
 }
 
-/* الكروت */
 .card {
   background: var(--card-bg);
   border-radius: 12px;
@@ -175,7 +185,6 @@ body {
   color: #a0cbdc;
 }
 
-/* من أنا */
 #about {
   text-align: center;
   padding: 3rem 1rem;
@@ -193,7 +202,6 @@ body {
   margin: 0 auto 1rem;
 }
 
-/* الفوتر */
 footer {
   text-align: center;
   padding: 1rem;
@@ -202,7 +210,6 @@ footer {
   color: #888;
 }
 
-/* تأثيرات */
 @keyframes glow {
   from { filter: drop-shadow(0 0 10px var(--text-accent)); }
   to   { filter: drop-shadow(0 0 25px var(--text-accent)); }
