@@ -1,144 +1,131 @@
-/* ========== المتغيرات اللونية ========== */
+/* المتغيرات */
 :root {
-  --bg-dark: #0e1a2b;
-  --bg-darker: #162c4a;
-  --text-light: #e0e0e0;
+  --bg: #0e1a2b;
+  --bg-secondary: #152237;
+  --text-main: #e5f7ff;
   --text-accent: #00ffd5;
-  --text-sub: #a0dfe8;
-  --card-bg: #1a2740;
-  --card-shadow: rgba(0, 255, 213, 0.3);
+  --card-bg: #1a2940;
+  --shadow-glow: 0 0 15px rgba(0, 255, 213, 0.3);
+  --shadow-glow-hover: 0 0 25px rgba(0, 255, 213, 0.6);
 }
 
-/* ========== الإعداد العام ========== */
+/* إعادة الضبط */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: 'Cairo', sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-light);
+  background: var(--bg);
+  color: var(--text-main);
   line-height: 1.6;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
-/* ========== الهيدر / HERO ========== */
+/* الهيدر */
 #hero {
   text-align: center;
   padding: 4rem 1rem 2rem;
-  background: linear-gradient(135deg, var(--bg-darker), var(--bg-dark));
-  position: relative;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg));
 }
 .hero-logo {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  margin: auto 0 1rem;
-  display: block;
-  animation: glowLogo 2s infinite alternate ease-in-out;
-}
-@keyframes glowLogo {
-  from { filter: drop-shadow(0 0 10px var(--text-accent)); }
-  to   { filter: drop-shadow(0 0 30px var(--text-accent)); }
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  animation: glow 2s infinite alternate;
 }
 .hero-title {
   font-size: 2.5rem;
+  font-weight: bold;
   color: var(--text-accent);
-  margin-bottom: 0.5rem;
 }
 .hero-subtitle {
-  font-size: 1.1rem;
-  color: var(--text-sub);
+  font-size: 1.2rem;
+  color: #a0cbdc;
+  margin-top: 0.5rem;
   max-width: 600px;
-  margin: 0.5rem auto 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ========== القائمة والتنقل ========== */
-.menu-toggle {
-  display: none;
-  position: absolute;
-  top: 20px; left: 20px;
-  font-size: 2rem;
-  color: var(--text-accent);
-  cursor: pointer;
-}
-.nav-links {
-  list-style: none;
+/* التنقل */
+.navbar {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
-.nav-links a {
-  color: var(--text-light);
+.navbar a {
+  color: var(--text-main);
   text-decoration: none;
   font-weight: bold;
   position: relative;
-  padding: 0.25rem 0;
-  transition: color 0.3s;
 }
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px; right: 0;
-  width: 0; height: 3px;
-  background: var(--text-accent);
-  transition: width 0.3s;
-}
-.nav-links a:focus,
-.nav-links a:hover {
+.navbar a:hover,
+.navbar a.active {
   color: var(--text-accent);
 }
-.nav-links a:focus::after,
-.nav-links a:hover::after {
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--text-accent);
+  transition: width 0.3s;
+}
+.navbar a:hover::after,
+.navbar a.active::after {
   width: 100%;
+  left: 0;
 }
 
-/* عرض القائمة في الجوال */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: var(--bg-darker);
-    position: absolute;
-    top: 80px;
-    width: 100%;
-    padding: 1rem 0;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .menu-toggle {
-    display: block;
-  }
+/* الخدمات */
+#services {
+  padding: 3rem 1rem;
 }
-
-/* ========== قسم الخدمات ========== */
 .grid-cards {
   display: grid;
   gap: 1.5rem;
-  padding: 2.5rem 1rem;
-  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+
+/* تخطيط الشبكة */
+@media (max-width: 640px) {
+  .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+  .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (min-width: 1024px) {
   .grid-cards {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (min-width: 650px) and (max-width: 1023px) {
-  .grid-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
+/* الكروت */
 .card {
   background: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
-  text-decoration: none;
-  color: var(--text-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow-hover);
 }
 .card img {
   width: 100%;
@@ -146,52 +133,45 @@ body {
   object-fit: cover;
 }
 .card h3 {
-  margin: 1rem;
-  font-size: 1.2rem;
+  margin: 1rem 1rem 0.5rem;
   color: var(--text-accent);
+  font-size: 1.2rem;
 }
 .card p {
   margin: 0 1rem 1rem;
   font-size: 0.95rem;
-  line-height: 1.4;
-}
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 15px var(--card-shadow);
-}
-.glow {
-  animation: glowCard 3s infinite alternate ease-in-out;
-}
-@keyframes glowCard {
-  from { box-shadow: 0 0 10px rgba(0,255,213,0.2); }
-  to   { box-shadow: 0 0 25px rgba(0,255,213,0.6); }
+  color: #a0cbdc;
 }
 
-/* ========== قسم من أنا ========== */
+/* من أنا */
 #about {
-  padding: 3rem 1rem;
   text-align: center;
-  background: var(--bg-darker);
+  padding: 3rem 1rem;
+  background: var(--bg-secondary);
 }
 #about h2 {
   font-size: 2rem;
-  color: var(--text-accent);
   margin-bottom: 1rem;
+  color: var(--text-accent);
 }
 #about p {
   font-size: 1rem;
-  color: var(--text-sub);
-  margin-bottom: 1rem;
+  color: #c3d9e4;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-/* ========== الفوتر ========== */
+/* الفوتر */
 footer {
   text-align: center;
   padding: 1rem;
-  background: var(--bg-darker);
-  color: #888;
   font-size: 0.9rem;
+  background-color: var(--bg-secondary);
+  color: #888;
+}
+
+/* تأثيرات */
+@keyframes glow {
+  from { filter: drop-shadow(0 0 10px var(--text-accent)); }
+  to   { filter: drop-shadow(0 0 25px var(--text-accent)); }
 }
