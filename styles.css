@@ -43,8 +43,8 @@ body {
   font-weight: bold;
   color: var(--text-accent);
 }
-.hero-title {
-  font-size: 2rem;
+.all-services {
+  font-size: 1.7rem;
   font-weight: bold;
   color: var(--text-accent);
   margin-right: 2rem;
