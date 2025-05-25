@@ -43,12 +43,6 @@ body {
   font-weight: bold;
   color: var(--text-accent);
 }
-.all-services {
-  font-size: 1.7rem;
-  color:#00ffd5;
-  margin-right: 2rem;
-  margin-top: 1.2rem;
-}
 .hero-subtitle {
   font-size: 1.2rem;
   color: #a0cbdc;
@@ -190,7 +184,6 @@ body {
   font-size: 0.95rem;
   color: #a0cbdc;
 }
-
 #about {
   text-align: center;
   padding: 3rem 1rem;
@@ -201,6 +194,13 @@ body {
   margin-bottom: 1rem;
   color: var(--text-accent);
 }
+.all-services {
+  font-size: 1.7rem;
+  color: #00ffd5;
+  margin-right: 2rem;
+  margin-top: 1.2rem;
+}
+
 #about p {
   font-size: 1rem;
   color: #c3d9e4;
