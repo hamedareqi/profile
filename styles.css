@@ -1,11 +1,11 @@
 :root {
-  --bg: #D2B48C;
-  --bg-secondary: #A57E56;
-  --text-main: #402819;
-  --text-accent: #FFFFFF;
-  --card-bg: #A57E56;
-  --shadow-glow: 0 0 15px rgba(255, 255, 255, 0.3);
-  --shadow-glow-hover: 0 0 25px rgba(255, 255, 255, 0.6);
+  --bg: #F2E8DC;
+  --bg-secondary: #6F4E37;
+  --text-main: #3B2F2F;
+  --text-accent: #F8F1E7;
+  --card-bg: #A9745C;
+  --shadow-glow: 0 0 10px rgba(111, 78, 55, 0.2);
+  --shadow-glow-hover: 0 0 20px rgba(111, 78, 55, 0.4);
 }
 
 * {
