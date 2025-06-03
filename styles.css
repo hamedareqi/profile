@@ -218,3 +218,89 @@ footer {
   from { filter: drop-shadow(0 0 10px var(--text-accent)); }
   to   { filter: drop-shadow(0 0 25px var(--text-accent)); }
 }
+
+/* ---- قسم البودكاست ---- */
+.podcast-section {
+  background: var(--bg-secondary);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--text-accent);
+  margin: 3rem 0;
+  border-radius: 12px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: var(--shadow-glow);
+}
+
+.podcast-section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.podcast-card {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-glow);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.podcast-card:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-glow-hover);
+}
+
+.podcast-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.podcast-overlay-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-accent);
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* ---- قسم التواصل الاجتماعي ---- */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  background: var(--card-bg);
+  color: var(--text-accent);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-glow);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-links a:hover {
+  background: var(--text-accent);
+  color: var(--text-main);
+  box-shadow: var(--shadow-glow-hover);
+}
