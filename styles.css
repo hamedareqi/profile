@@ -1,12 +1,11 @@
-
 :root {
-  --bg: #0e1a2b;
-  --bg-secondary: #152237;
-  --text-main: #e5f7ff;
-  --text-accent: #00ffd5;
-  --card-bg: #1a2940;
-  --shadow-glow: 0 0 15px rgba(0, 255, 213, 0.3);
-  --shadow-glow-hover: 0 0 25px rgba(0, 255, 213, 0.6);
+  --bg: #D2B48C;
+  --bg-secondary: #A57E56;
+  --text-main: #402819;
+  --text-accent: #FFFFFF;
+  --card-bg: #A57E56;
+  --shadow-glow: 0 0 15px rgba(255, 255, 255, 0.3);
+  --shadow-glow-hover: 0 0 25px rgba(255, 255, 255, 0.6);
 }
 
 * {
@@ -22,7 +21,6 @@ body {
   font-size: 16px;
   overflow-x: hidden;
 }
-
 
 #hero {
   text-align: center;
@@ -45,7 +43,7 @@ body {
 }
 .hero-subtitle {
   font-size: 1.2rem;
-  color: #a0cbdc;
+  color: #402819;
   margin-top: 0.5rem;
   max-width: 600px;
   margin-left: auto;
@@ -53,13 +51,13 @@ body {
 }
 @keyframes pulseGlow {
   0% {
-    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
   }
   50% {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
   }
   100% {
-    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -182,7 +180,7 @@ body {
 .card p {
   margin: 0 1rem 1rem;
   font-size: 0.95rem;
-  color: #a0cbdc;
+  color: #402819;
 }
 #about {
   text-align: center;
@@ -196,14 +194,14 @@ body {
 }
 .all-services {
   font-size: 1.7rem;
-  color: #00ffd5;
+  color: var(--text-accent);
   margin-right: 2rem;
   margin-top: 1.2rem;
 }
 
 #about p {
   font-size: 1rem;
-  color: #c3d9e4;
+  color: #402819;
   max-width: 700px;
   margin: 0 auto 1rem;
 }
@@ -213,11 +211,10 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   background-color: var(--bg-secondary);
-  color: #888;
+  color: #402819;
 }
 
 @keyframes glow {
   from { filter: drop-shadow(0 0 10px var(--text-accent)); }
   to   { filter: drop-shadow(0 0 25px var(--text-accent)); }
 }
-
